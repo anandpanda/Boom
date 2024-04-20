@@ -72,7 +72,8 @@ const MeetingModal = ({
 								width={13}
 								height={13}
 							/>
-						)} &nbsp;
+						)}{" "}
+						&nbsp;
 						{buttonText || "Schedule Meeting"}
 					</Button>
 				</div>
