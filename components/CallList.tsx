@@ -66,7 +66,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
     if (type === 'recordings') {
       fetchRecordings();
     }
-  }, [type, callRecordings]);
+  }, [type, callRecordings, toast]);
 
   if (isLoading) return <Loader />;
 
@@ -89,7 +89,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
             title={
               (meeting as Call).state?.custom?.description ||
               (meeting as CallRecording).filename?.substring(0, 20) ||
-              'No Description'
+              'Personal Room'
             }
             date={
               (meeting as Call).state?.startsAt?.toLocaleString() ||
